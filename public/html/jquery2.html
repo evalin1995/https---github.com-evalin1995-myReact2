@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    
+    body{
+        font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console;
+    }
+    img{
+        width: 100%;}
+    .cssAnim1{
+        background-color: #D7D3BF;
+        /* width: 48%; */
+        width: 320px;
+        height: 20vh;
+        display: block;
+        overflow: hidden;
+margin: 1vh;
+    }
+    .cssAnim1 img{
+        height: 100%;  
+        object-fit: cover;
+transition: all .7s linear;    }
+    .cssAnim1:nth-child(odd) img{
+        object-fit: contain;
+transition: all .4s linear; 
+    }
+    /* .cssAnim1:hover img{
+        transform: scale(1.5);
+    } */
+    .imgScale img{
+        transform: scale(1.5);
+
+    }
+    
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+    <h2>動態新增刪除類別</h2>
+    <ul>
+        <li>新增類別</li>
+        <li>移除類別=>removeClass()</li>
+        <hr>
+        <a href="" class="cssAnim1"><img src="./image/06clement-duf-EGtOU5iDx34-unsplash.jpg" alt=""></a>
+        <a href="" class="cssAnim1"><img src="./image/02eric-schroen-LKH5IibO_cQ-unsplash.jpg" alt=""></a>
+    </ul>
+</div>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script>
+    $(function(){
+        $('.cssAnim1').hover(function(){
+            $(this).addClass('imgScale');
+        },function(){
+            $(this).removeClass('imgScale');
+        }    )
+    })
+</script>
+</body>
+</html>

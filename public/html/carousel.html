@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+img{
+    width: 100%;
+}
+#carousel li{
+width: 48%;
+    height: auto;
+list-style: none;
+}
+#carousel img{
+    height: 100%;
+    object-fit: cover;
+    }
+#carousel img:nth-child(odd){
+    object-fit: contain;
+}
+
+</style>
+</head>
+<body>
+<div id="carousel">
+    <ul>
+        <li><img src="./image/06bruna-branco-0wn-DdavPa4-unsplash.jpg" alt=""></li>
+        <li><img src="./image/07yeh-xintong-Cz5nR1hP08w-unsplash.jpg" alt=""></li>
+        <li><img src="./image/10big-dodzy-sRAsn4cv1HI-unsplash (1).jpg" alt=""></li>
+        <li><img src="./image/08azmaan-baluch-tG9eGRhaSXE-unsplash.jpg" alt=""></li>
+        <li><img src="./image/09pirata-studio-film-78t6dVjtJl8-unsplash.jpg" alt=""></li>
+    </ul>
+</div>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/jquery.jcarousellite.min.js"></script>
+<script>
+    $(function(){
+        $('#carousel').jCarouselLite({
+            auto:2000, //多久時間輪播
+            speed:1000,
+            scroll:1,
+            visible:2,
+        });
+    })
+</script>
+</body>
+</html>
