@@ -1,0 +1,148 @@
+*{
+    margin:0;
+}
+:root{
+    --red:rgb(234,54,80);
+--grey:rgb(200,200,200);
+    --white:white;
+    --blue:rgb(29,125,208);
+    --darkGrey:rgb(230,230,230);
+    --green:rgb(114,188,64)
+}
+body{
+    font-family: sans-serif;
+}
+ul,ol{
+    list-style: none;
+}
+section li{
+    margin: 0 15px;
+    max-width: 320px;
+}
+img{
+    width: 100%;
+}
+/* section::before{
+    margin-top:-100px;
+    content: '';
+    height:120px;
+} */
+
+section
+/* :not(#features) */
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#banner{
+    height: 30%;
+}
+
+#banner img{
+    object-fit: cover;
+}
+/* features */
+#features{
+    margin:40px auto;
+}
+#features ul{
+    display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+margin:auto 2%;
+text-align: center;
+}
+.feature h3{
+    color:var(--red);
+}
+
+/* slogan era */
+#slogan{
+    background-color: var(--red);
+color:var(--white);
+height:80px;
+display: flex;
+justify-content: center;
+font-weight:800;
+}
+/* listbox*/
+#listbox{
+    margin:40px auto;
+}
+
+#listbox h2{
+color: var(--green);
+/* margin:20px 0; */
+line-height: 100px;
+}
+#listbox ul{
+    display: flex;
+    justify-content: space-evenly;
+/* overflow: hidden; */
+flex-wrap: wrap;
+}
+#listbox li {
+    /* flex:1; */
+   
+box-shadow:0 0 10px var(--grey);
+
+display: flex;
+flex-direction: column;
+min-height:480px;
+min-width: 300px;
+}
+
+#listbox figure {
+    margin: 0;
+    width: 100%;
+    height: 220px;
+}
+
+#listbox img {
+    height: 100%;
+    object-fit: cover;
+    /* 短編滿版,長邊剪裁 ./長邊滿版,長寬等比例縮放 */
+}
+
+#listbox .content {
+    padding: 20px;
+}
+.lesson-feature{
+    color:var(--blue);
+}
+.original
+/* :not(.discount) */
+ {
+    text-decoration: line-through;
+}
+.discount{
+    color: red;
+    
+}
+#listbox li  .price {
+    display: flex;
+justify-content: center;
+}
+#listbox button{
+ background-color: var(--red);
+ color: var(--white);
+ border: 1px solid transparent;
+ padding:20px 20px;
+    border-radius: 8px;
+    margin: 20px 20%;
+    
+}
+
+footer{
+    background-image: linear-gradient(var(--grey)30%, var(--darkGrey) 100%);
+min-height: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+}

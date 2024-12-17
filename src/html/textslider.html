@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./textslider.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console;
+
+        }
+
+        .slideText {
+            height: 2.8em;
+            background-color: #D4EBF8;
+        }
+
+        .slideText li {
+            text-align: left;
+            color: #E38E49;
+            font-size: 1.2em;
+            line-height: 1.2;
+        }
+
+        .slideText li>span {
+            background-color: #1F509A;
+            color: #ccc;
+            padding: 0 1vh;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- div.slideText>ul>li*8{New$} -->
+
+    <div class="slideText">
+        <ul>
+            <li><span>New1</span> <br> Eligendi exercitationem facere quibusdam minima?</li>
+            <li><span>New2</span> <br> Lorem ipsum dolor sit amet.</li>
+            <li><span>New3</span> <br> Ullam culpa maiores perferendis eos?</li>
+            <li><span>New4</span> <br> Quaerat ipsa aspernatur in incidunt!</li>
+            <li><span>New5</span> <br> Quis minima vel commodi magnam.</li>
+            <li><span>New6</span> <br> Nulla architecto nisi incidunt quibusdam.</li>
+            <li><span>New7</span> <br> Incidunt corrupti sapiente harum eos.</li>
+            <li><span>New8</span> <br> Lorem ipsum dolor sit amet.</li>
+        </ul>
+    </div>
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/jquery.textslider.min.js"></script>
+    <script>
+        $(function () {
+            $('.slideText').textslider({
+                direction: 'scorollUp',
+                scrollNum: 1,
+                // 捲動速度
+                scrollSpeed: 800,
+                pause: 3000// 停頓時間
+            })
+        })
+    </script>
+</body>
+
+</html>

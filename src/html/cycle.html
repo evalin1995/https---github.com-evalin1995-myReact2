@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #imgCycle img {
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        #imgCycle {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box {
+            height: 60vh;
+            width: 600px;
+            border: 2px solid #2D9596;
+            position: relative;
+        }
+
+        #nav {
+            display: flex;
+            position: absolute;
+            right: 2vh;
+            bottom: 1vh;
+            z-index: 99;
+border: 2px solid red;
+        }
+
+        #nav a {
+            /* display: inline-block; */
+            /* 轉成區塊元素並水平排列 */
+            font-size: 20px;
+            line-height: 25px;
+            width: 25px;
+            height: 25px;
+            color: #fff;
+            /* padding: 15px; */
+            margin: 0 4px;
+            text-decoration: none;
+            /* display: table-cell; */
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        #nav a.activeSlide {
+            background-color: #E8C872;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="box">
+        <div id="imgCycle">
+            <img src="./image/01vedanth-ravi-Do3N9hpgrPg-unsplash.jpg" alt="">
+            <img src="./image/02eric-schroen-LKH5IibO_cQ-unsplash.jpg" alt="">
+            <img src="./image/03kalen-emsley-G1qxBDxM8vE-unsplash.jpg" alt="">
+            <img src="./image/04holly-mandarich-7MrXw_o7Eo4-unsplash.jpg" alt="">
+            <img src="./image/pascal-bullan-2uVPwECyL2U-unsplash.jpg" alt="">
+        </div>
+        <!-- <nav>輪播鈕導覽列</nav> -->
+    </section>
+    <!-- 載入jQuery的主程式     -->
+    <script src="./jquery-3.7.1.min.js"></script>
+    <!-- step2.載入輪播的主程式 -->
+    <script src="./jquery.cycle.all.js"></script>
+    <script>
+        $(function () {
+            $('#imgCycle').after('<div id="nav"></div>').cycle({
+                fx: 'fade',
+                sync: false,
+                timeout: 3000,
+                pager: '#nav'
+            });
+            // $('#imgCycle').cycle();
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+    body {
+        font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .cssAnim1 {
+        /* width: 48%; */
+        width: 320px;
+        height: auto;
+        display: block;
+        overflow: hidden;
+        margin: 1vh;
+    }
+
+    .cssAnim1 img {
+        height: 100%;
+        object-fit: cover;
+        transition: all .7s linear;
+    }
+
+    .cssAnim1:nth-child(odd) img {
+        object-fit: contain;
+        transition: all .4s linear;
+    }
+.cssAnim1:nth-child(3){
+width: 720px;
+    height: 50vh;
+}
+    .imgScale img {
+        transform: scale(1.5);
+
+    }
+    .wrapper{
+        display: flex;
+        flex-flow: wrap;
+    }
+    #gotop{
+        width: 12vh;
+        height: 12vh;
+        background-color: #FF7F3E;
+        border-radius: 50%;
+        position: fixed;
+        right: 3vh;
+        bottom: 5vh;
+        cursor: pointer;
+        opacity: .92;
+    }

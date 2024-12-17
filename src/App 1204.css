@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+ul,ol{
+    list-style: none;
+}
+/* img{
+    width: 100%;
+} */
+
+body{
+    font-family: 'Noto Sans TC';
+    color: #3F3F3F;
+}
+
+/* p{
+    font-size: .8rem;
+} */
+.wrap{
+    width: 1200px;
+    margin: 50px auto;
+}
+.container{
+    display: flex;
+    border: 1px solid red;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.card{
+    
+  width: 550px;
+text-align: center;
+border-radius: 8px;
+border: 2px solid blue;
+margin-bottom: 10px;
+/* width: 100%;
+min-width: 360px; */
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border: 1px solid red;
+
+}
+.card>h3{
+    
+    background-color:#eee;
+    padding: 5px 0;
+    text-align: center;
+    border-bottom:  2px solid #E7E7E7;
+    border-radius: 8px 8px 0 0;
+}
+.item>img{
+    width: 30%;
+}
+/* li img{
+    max-width: 72px;
+}
+.card span{
+    font-size: .8rem;
+    
+} */
