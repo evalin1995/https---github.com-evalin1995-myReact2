@@ -1,0 +1,89 @@
+a,ol,ul{
+    text-decoration: none;
+}
+#wrapper{
+    padding: 50px 0;
+width: 640px;
+text-align: justify;
+}
+.btnBox{
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+p{
+    padding-bottom: 2em;
+    font-size: 1em;
+    line-height: 1.6rem;
+}
+:root{
+    --primary2:#163020;
+    --primary:#B6C4B6;
+    --neutral:#B6C4B6;
+    --text:#041009;
+}
+main{
+    background-color: #DDDDDD;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #3E5879;
+    color: var(--text);
+}
+
+/* 開啟跳出視窗按鈕樣式 */
+.modal-btn{
+    padding: 15px 20px;
+color: #FBF6E9;
+font-size: 14px;
+font-weight: bold;
+text-align: center;
+display: inline-block;
+overflow: hidden;
+background-color: var(--primary2);
+border: 2px solid var(--neutral);
+border-radius: 5px;
+box-shadow: 0 0 3px var(--primary2);
+transition:  all .2s ease-in-out;
+opacity: .7;
+}
+.modal-btn:hover{
+    opacity: 1;
+}
+
+/* 遮罩元素 */
+#mdOverlay{
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 97;
+display: none;
+background-color: var(--text);
+}
+/* 彈出視窗頁面置中 */
+#mdWindow{
+    margin-top: -200px;
+    margin-left: -20%;
+    display: flex;
+justify-content: center;
+width: 500px;
+height: 400px;
+z-index: 98;
+background-color: #fff;
+display: none;
+}
+/* 彈出視窗關閉按鈕樣式 */
+#mdWindow> .mdClose{
+    top: -15px;
+
+right: -15px;
+width: 30px;
+height: 30px;
+color:#fff;
+background-color: #ccc;
+border-radius: 30px;
+position: absolute;
+z-index: 99;
+cursor: progress;
+box-shadow: 0 0 3px 0 var(--text);
+}

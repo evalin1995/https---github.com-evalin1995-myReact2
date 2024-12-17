@@ -1,18 +1,16 @@
+import { Link } from "react-router-dom"
 
-export default function Navbar(){
+export default function Navbar() {
     return (
         <div>
-
             <ul class="menu">
-                    {/* <li><a href="">VIDEO</a></li>
-                <li><a href="">CONTACT</a></li> */}
-                            <li><Link to="/">HOME</Link>
-                </li>
-                <li><Link to="/">NEWS</Link>
-                </li>
-                <li><Link to="/">SERVICE</Link></li>
-                <li><Link to="/">ABOUT</Link></li>
-            </ul>
+                <li><Link to="/">HOME</Link>                </li>
+                <li><Link to="/about">ABOUT</Link></li>
+                <li><Link to="/news">                NEWS</Link></li>
+                <li><a href="public\html\masonry.html">Mount Masonry</a></li>
+                <li><a href="public\html\carousel.html">NEW Curry</a></li>
+                <li><a href="public\html\cycle.html">Mount Cycle</a></li>
+                </ul>
         </div>
     )
 }

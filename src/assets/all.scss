@@ -1,5 +1,15 @@
-$primary-bg:#C9E6F0;
+$primary-bg:#43766C;
+
+$primary2-bg:#F8FAE5;
+$primary3-bg:#B19470;
+$primary4-bg:#76453B;
 
 body{
     background-color: $primary-bg;
 }
+a{
+   color: $primary2-bg;
+}
+p{
+    color: $primary3-bg;
+ }
