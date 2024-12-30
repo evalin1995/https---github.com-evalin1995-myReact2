@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+// import App from './App.jsx'
+import App from './App 1218-Navbar.jsx'
 import './assets/all.scss'
 import { BrowserRouter } from 'react-router-dom'
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h2>localStorage應用</h2>
+<hr>
+<p>第<span id="count"></span>次造訪網頁</p>
+<script>
+    if(localStorage.visit){
+        console.log('有拜訪過')        ;
+        console.log(parseInt(localStorage.visit)+1)        ;
+        localStorage.visit=parseInt(localStorage.visit)+1;
+        document.getElementById('count').textContent=' '+ localStorage.visit+' ';
+    }else{
+        localStorage.visit=0;
+    }
+</script>
+</body>
+</html>

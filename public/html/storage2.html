@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>取出storage變數</h2>
+    <hr>
+    <p class="showData" id="showData-id"></p>
+    <button class="btn1" onclick="clearStorage()">清除選定的storage變數</button><br>
+    <button class="btn2" onclick="clearAllStorage()">清除所有storage變數</button>
+    <script>
+        // 取得單一變數
+        let var1 = window.localStorage.getItem('var1')
+        // document.write(var1);
+        // let btn2=document.getElementById('btn2');
+        // 使用querySelector(類別名稱)=>取得該類別第一個
+
+        // 取得多個變數
+        let varAll = '';
+        for (let i = 0; i < window.localStorage.length; i++) {
+            let currKey = window.localStorage.key(i);
+            console.log(currKey);
+            // 保存在varAll
+            // \n=>跳脫字元=>搭配innerText
+            // <br>=>HTML元素=>搭配innerHTML
+            // 純文字內容=>搭 配textContent
+
+            varAll += window.localStorage.getItem(currKey) + ',';
+        }
+        document.getElementById('showData-id').textContent = varAll;
+
+        document.querySelector('.showData').textContent = var1;
+        // 清除全部
+        function clearAllStorage() {
+            window.localStorage.clear();
+            document.getElementById('showData-id').textContent = 'storage變數已清空';
+        };
+        // 指定清除
+        function clearStorage() {
+            window.localStorage.removeItem('var1');
+            document.getElementById('showData-id').textContent = 'storage變數var1已清空';
+        };
+    </script>
+</body>
+
+</html>

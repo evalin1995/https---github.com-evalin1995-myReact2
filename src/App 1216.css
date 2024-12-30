@@ -1,0 +1,26 @@
+.box{
+    width: 300px;
+    height: 200px;
+    background-color: #333;
+    color:#fff;
+ }
+ a{
+    text-decoration: none;
+color:#F72C5B; 
+}
+ a:hover{
+    text-decoration: none;
+ }
+ .ttp-show{
+    display: none;
+ }
+ #ttp-panel{
+    padding: 15px;
+    width: 200px;
+    text-align: left;
+    border: 3px solid #A7D477;
+background-color: #fff;
+    z-index: 99; 
+    display: none;
+    position: absolute;
+}

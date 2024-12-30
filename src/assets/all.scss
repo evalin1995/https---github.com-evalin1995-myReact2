@@ -1,11 +1,13 @@
-$primary-bg:#43766C;
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Braah+One&family=Cactus+Classical+Serif&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
 
+$primary-bg:#43766C;
 $primary2-bg:#F8FAE5;
 $primary3-bg:#B19470;
 $primary4-bg:#76453B;
 
 body{
     background-color: $primary-bg;
+  font-family: "Vollkorn", serif;
 }
 a{
    color: $primary2-bg;
