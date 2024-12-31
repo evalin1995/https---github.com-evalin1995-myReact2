@@ -24,3 +24,16 @@ height: 24%;
 .main>img{
       height: 100%;
 }
+td{
+   border-bottom:2px solid #FF885B;
+
+}
+td:nth-child(even){
+   text-align: right;
+}
+label{
+   color: #FFE5CF;
+}
+td>img{
+   width: 100%;
+}
