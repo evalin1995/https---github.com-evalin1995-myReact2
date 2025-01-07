@@ -37,3 +37,10 @@ label{
 td>img{
    width: 100%;
 }
+ul,ol,li{
+   list-style: none;
+}
+.masonry>li{
+   border: 2px solid yellow;
+   width: 180px;
+}

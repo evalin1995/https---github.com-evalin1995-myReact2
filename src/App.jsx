@@ -1,50 +1,50 @@
-import { createContext, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
-import { useContext } from 'react';
-
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 export default function App() {
-  // 見共用環境
-const UserContext= createContext({});
-// 建立使用者變數
-  const [username, setUsername] = useState('demo');
-// 建立登入鈕的區域
-  const [isLogin, setIsLogin] = useState(false);
+  // 驗證是否連上unsplash
+  // https://api.unsplash.com/search/photos/?client_id=請輸入自己的Access Key
+  // https://api.unsplash.com/photos/?client_id=請輸入自己的Access_Key
 
-  const LoginForm = () => {
-    // 從共用區UserContext解構出username
-    const {username,setUsername,setIsLogin}= useContext(UserContext);
-    return (
-      <>
-        <label htmlFor="username">使用者名稱</label>
-        <input type="text" id="username" placeholder="請輸入名稱"
-        value={username}
-        onChange={e=> setUsername(e.target.value)} />
-        <button type="button"
-        onClick={()=>{
-          setIsLogin(true)
-        }}>登入</button>
-      </>
-    )
-  };
-  const Greeting = () => {
-    // 從共用區userContext取得username
-    const { username } = useContext(UserContext);
-    return (
-      <div>Hi!{username}</div>
-    )
-  }
-  // 建立第二個username的應用元件
-  const ShowName = () => {
-    return <div>我是ShowName元件測試,{username}</div>
-  }
+  const api = 'https://api.unsplash.com/search/photos/';
+  const accessKey = 'ghL-4jOsPmP8yLl2pUT-_8mHFuaN6ZZ5IRrBRYWWTqA'
+  const [filterString, setFilterString] = useState('cafe');
+  const [jsonData,setJsonData]=useState([]);
+  
+  //  建立非同步方法,取得遠端資料
+  //  避免重新渲染,所有寫在useEffect
+  useEffect(() => {
+    const getPhotos = async () => {
+      console.log(`${api}?client_id=${accessKey}&query=curry`);
+      // 發出請求給遠端api,並傳回結果
+      const result = await axios.get(`${api}?client_id=${accessKey}&query=curry`);
+      console.log(result);
+      setJsonData((preData)=>{
+        return [...preData,...result.data.results];
+      })
+    }
+    getPhotos();
+  }, [])
+  
   return (
     // 最外層
     <>
-      <h1>useContext</h1>    <hr />
-<UserContext.Provider value={{username,setUsername,setIsLogin}}>
-  {isLogin ?<><Greeting /><br /><ShowName/></>:<LoginForm />}
-</UserContext.Provider>
+      <div>api</div>
+      <div style={{
+        width:600
+      }}>
+        <label htmlFor=""></label><input type="text" />
+        <ul className='masonry' style={{
+          display:'flex',border:'2px solid blue',flexWrap:'wrap'
+        }}>
+          <li>Photo1<img src="" alt="" /></li>
+          <li>Photo2<img src="" alt="" /></li>
+          <li>Photo3<img src="" alt="" /></li>
+        </ul>
+      </div>
+      {/* div>label+input+ul>(li{Photo$}>img)*3 */}
     </>
   )
 }
